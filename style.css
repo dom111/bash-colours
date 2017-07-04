@@ -1,0 +1,54 @@
+@import 'terminal-preview/dist/terminal-min.css';
+
+h1 .version { opacity: 0; font-size: 0.8em; font-family: monospace; letter-spacing: -5px; transition: .25s opacity linear; }
+h1:hover .version { opacity: .3; }
+
+.visibility-hidden { visibility: hidden; }
+
+pre { position: relative; }
+pre a.btn { display: none; position: absolute; right: 2px; top: 2px; }
+pre:hover a.btn { display: block; }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .col-md-3 .col-md-6 {
+        width: 100%;
+    }
+
+    .builder .blocks > .block:nth-child(4n+1) {
+        clear: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .builder .blocks > .block:nth-child(4n+1) {
+        clear: left;
+    }
+}
+
+.fg.bg-30,
+.fg.bg-49 { background-color: #0C0C0C; }
+.fg.bg-31 { background-color: #CD0000; }
+.fg.bg-32 { background-color: #00CD00; }
+.fg.bg-33 { background-color: #CDCD00; }
+.fg.bg-34 { background-color: #1E90FF; }
+.fg.bg-35 { background-color: #CD00CD; }
+.fg.bg-36 { background-color: #00CDCD; }
+.fg.bg-37,
+.fg.bg-39 { background-color: #E5E5E5; }
+.bg.bg-49,
+.fg.bg-90 { background-color: #4C4C4C; }
+.fg.bg-91 { background-color: #F00; }
+.fg.bg-92 { background-color: #0F0; }
+.fg.bg-93 { background-color: #FF0; }
+.fg.bg-94 { background-color: #4682B4; }
+.fg.bg-95 { background-color: #F0F; }
+.fg.bg-96 { background-color: #0FF; }
+.fg.bg-97 { background-color: #FFF; }
+
+body.no-clipboard .copy { display: none; }
+pre.copy-paste .contents { min-height: 1em; display: block; }
+
+pre.terminal .block:before { content: 'Example text'; }
+pre.terminal:focus .block:before,
+pre.terminal:active .block:before,
+pre.terminal:hover .block:before { content: ''; }
